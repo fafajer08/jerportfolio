@@ -47,7 +47,6 @@ body {
   background: #0c1022;
   color: #fff;
 }
-
 /* #endregion Defaults */
 
 .header {
@@ -74,7 +73,7 @@ body {
 
 .navbar a {
   display: inline-block;
-  font-size: 18px;
+  font-size: clamp(0.88rem, calc(0.79rem + 0.43vw), 1.13rem);
   color: #fff;
   text-decoration: none;
   font-weight: 500;
@@ -108,7 +107,7 @@ body {
 }
 
 .home-content h1 {
-  font-size: 56px;
+  font-size: clamp(1.63rem, calc(0.97rem + 3.26vw), 3.50rem);
   font-weight: 700;
   line-height: 1.5;
   opacity: 0;
@@ -117,7 +116,7 @@ body {
 }
 
 .home-content h3 {
-  font-size: 32px;
+  font-size: clamp(1.50rem, calc(1.33rem + 0.87vw), 2.00rem);
   font-weight: 700;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
@@ -125,7 +124,7 @@ body {
 }
 
 .home-content p {
-  font-size: 16px;
+  font-size: clamp(0.88rem, calc(0.83rem + 0.22vw), 1.00rem);
   margin: 20px 0 40px;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
@@ -137,9 +136,9 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 180px;
-  height: 48px;
-  font-size: 19px;
+  width: clamp(7.50rem, calc(6.20rem + 6.52vw), 11.25rem);
+  height: clamp(1.88rem, calc(1.48rem + 1.96vw), 3.00rem);
+  font-size: clamp(0.94rem, calc(0.85rem + 0.43vw), 1.19rem);
   border-radius: 40px;
   color: #fff;
   text-decoration: none;
@@ -256,8 +255,8 @@ body {
 }
 
 .home-img {
-  width: 410px;
-  height: 410px;
+  width: clamp(13.75rem, calc(9.62rem + 20.65vw), 25.63rem);
+  height: clamp(13.75rem, calc(9.62rem + 20.65vw), 25.63rem);
   opacity: 0;
   animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
   animation-delay: 1.5s, 2.1s;
@@ -277,10 +276,10 @@ body {
 .home-img .glowing-circle::after {
   content: '';
   position: absolute;
-  width: 380px;
-  height: 380px;
+  width: clamp(12.50rem, calc(8.59rem + 19.57vw), 23.75rem);
+  height: clamp(12.50rem, calc(8.59rem + 19.57vw), 23.75rem);
   background: #0c1022;
-  border-radius: 50%;
+  border-radius: 100vmax;;
 }
 
 .glowing-circle span {
@@ -288,7 +287,7 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(#f06, #3cf);
-  border-radius: 50%;
+  border-radius: 100vmax;;
   animation: circleRotate 5s linear infinite;
 }
 
@@ -298,8 +297,8 @@ body {
 
 .glowing-circle .image {
   position: relative;
-  width: 380px;
-  height: 380px;
+  width: clamp(12.50rem, calc(8.59rem + 19.57vw), 23.75rem);
+  height: clamp(12.50rem, calc(8.59rem + 19.57vw), 23.75rem);
   border-radius: 50%;
   z-index: 1;
   overflow: hidden;
@@ -311,12 +310,13 @@ body {
   right: 10%;
   bottom: 1px;
   transform: translateX(-50%);
-  max-width: 400px;
+  height: clamp(17.50rem, calc(14.89rem + 13.04vw), 25.00rem);
+  width: clamp(17.50rem, calc(14.89rem + 13.04vw), 25.00rem);
   object-fit: cover;
 }
 
 /* #region Media Query */
-@media only screen and (max-width:1250px){
+@media only screen and (max-width:1240px){
   .header {
     flex-direction: column;
     gap: 1rem;
@@ -325,7 +325,7 @@ body {
   .navbar {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: clamp(1.00rem, calc(0.65rem + 1.74vw), 2.00rem);
   }
 
   .navbar a {
@@ -345,21 +345,11 @@ body {
 
   .home-img {
     margin-top: 2rem;
-    width: 320px;
-    height: 320px;
-  }
-
-  .home-img .glowing-circle::after, 
-  .glowing-circle .image {
-    width: 300px;
-    height: 300px;
-    border-radius: 100vmax;
   }
 }
 /* #endregion Media Query */
 
 /* #region KEYFRAMES ANIMATION */
-
 @keyframes slideTop {
   0% {
     opacity: 0;
