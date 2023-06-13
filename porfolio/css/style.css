@@ -1,3 +1,4 @@
+/* #region Defaults */
 html {
   box-sizing: border-box;
   width: 100%;
@@ -46,6 +47,8 @@ body {
   background: #0c1022;
   color: #fff;
 }
+
+/* #endregion Defaults */
 
 .header {
   position: fixed;
@@ -312,7 +315,50 @@ body {
   object-fit: cover;
 }
 
-/* KEYFRAMES ANIMATION */
+/* #region Media Query */
+@media only screen and (max-width:1250px){
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .navbar a {
+    margin-left: unset;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+
+  .home-sci {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .home-img {
+    margin-top: 2rem;
+    width: 320px;
+    height: 320px;
+  }
+
+  .home-img .glowing-circle::after, 
+  .glowing-circle .image {
+    width: 300px;
+    height: 300px;
+    border-radius: 100vmax;
+  }
+}
+/* #endregion Media Query */
+
+/* #region KEYFRAMES ANIMATION */
 
 @keyframes slideTop {
   0% {
@@ -394,3 +440,4 @@ body {
     transform: rotate(360deg);
   }
 }
+/* #endregion KEYFRAMES ANIMATION */
