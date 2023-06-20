@@ -6,25 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
 
-  <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+  * {  
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  </style>
 </head>
+
+
 <body>
     <!-- Image Section Starts  -->
     <div class="about_container">
-    <div class="about_container">
+    <div class="about_content">
+
       <section class="imageSection">
-        <img src="./img/graduation.jpeg">
+        <img src="./img/graduation2.png">
       </section>
       <!-- Image Section Ends  -->
       
       <!-- Info Section Starts -->
       <section class="infoSection">
         <h1>About Me</h1>
-        <h2>Professional Web Developer</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, ipsum dolorem quae iusto cupiditate voluptatem id earum eius quibusdam dolore laboriosam at ad esse officiis.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, enim?</p>
+        <h2>Aspiring Front-end Developer</h2>
+        <p>Passionate front-end developer specializing in HTML and CSS. Committed to crafting captivating and user-friendly websites. Constantly honing skills to deliver outstanding digital experiences.</p>
         <div class="personalInfo">
           <div><span>Name:</span><span>Jerwin Maguyon</span></div>
           <div><span>Age:</span><span>26 Years Old</span></div>
@@ -33,11 +42,46 @@
         </div>
         
         <div class="button">
-          <button>Download Cv</button>
+          <a href="./img/cv.pdf" download><button class="btn">Download Cv</button></a>
         </div>
       </section>
+      <!-- Info Section Ends -->
+
+      <!-- Skills Section Starts -->
+      <section class="skillSection">
+
+          <div class="skill">
+            <div class="subject">Hard Work</div>
+              <div class="progress_bar">
+              <div class="progress_line" value="94%" style="max-width: 94%" ></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="subject">Web Designing</div>
+              <div class="progress_bar">
+              <div class="progress_line" value="75%" style="max-width: 75%" ></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="subject">Creativity</div>
+              <div class="progress_bar">
+              <div class="progress_line" value="73%" style="max-width: 73%" ></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="subject">Web Development</div>
+              <div class="progress_bar">
+              <div class="progress_line" value="85%" style="max-width: 85%" ></div>
+            </div>
+          </div>
+
+      </section>
+      <!-- Skills Section Ends -->
+
     </div>
   </div>
-    <!-- Info Section Ends -->
 </body>
 </html>
