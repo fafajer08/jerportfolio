@@ -374,7 +374,7 @@ about.html {
   content: '';
   width: 100%;
   height: 100%;
-  outline: 3px solid #787cb5;
+
   top: 15px;
   left: 15px;
   z-index: 1;
@@ -447,7 +447,7 @@ about.html {
   letter-spacing: 1px;
 }
 
-.infoSection .btn {
+.infoSection .btn-2 {
   min-width: 150px;
   padding: 8px 18px;
   border: 1px solid #787cb5;
@@ -461,7 +461,7 @@ about.html {
   margin-top: 20px;
 }
 
-.infoSection .btn:hover {
+.infoSection .btn-2:hover {
   color: #787cb5;
   border-color: #aaabb0;
   cursor: pointer;
