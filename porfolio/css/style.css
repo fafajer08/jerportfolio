@@ -72,6 +72,12 @@ body {
   pointer-events: none;
   opacity: 0;
   animation: slideTop 1s ease forwards;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.logo:hover {
+  transform: scale(1.1);
 }
 
 .navbar a {
@@ -93,37 +99,60 @@ body {
 }
 
 .home {
+  position:relative;
   width: 100%;
+  justify-content: space-between;
   height: 100vh;
-  display: flex;
-  align-items: center;
   padding: 0 10%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 70px 10% 0;
 }
 
 .home-content {
-  max-width: 500px;
+  max-width: 600px;
   margin-left: -30px;
 }
 
-.home-content h1 {
+/* .home-content h1 {
   font-size: clamp(1.63rem, calc(0.97rem + 3.26vw), 3.50rem);
   font-weight: 700;
   line-height: 1.5;
   opacity: 0;
   animation: slideRight 1s ease forwards;
   animation-delay: .7s;
-}
+} */
 
-.home-content h3 {
+/* .home-content h3 {
   font-size: clamp(1.50rem, calc(1.33rem + 0.87vw), 2.00rem);
   font-weight: 700;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
   animation-delay: 1s;
+} */
+
+/* another style */
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+.home-content h3:nth-of-type(2){
+  margin-bottom: 30px;
+}
+.home-content h3 span {
+  color: #0ef;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: .7s;
 }
 
 .home-content p {
@@ -343,6 +372,23 @@ about.html {
   transform: translateY(0); /* Change transform to 0 when showing */
 }
 
+/* Add the following CSS code to your existing styles */
+
+.about_container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add transition and transform properties to all elements */
+.about_container * {
+  transition: all 0.3s ease;
+}
+
+.imageSection:hover {
+  transform: scale(1.2);
+}
+
+
 .imageSection {
   grid-area: imageSect;
 }
@@ -376,6 +422,7 @@ about.html {
   position: relative;
   z-index: 2;
 }
+
 
 .about_content .imageSection::after {
   position: absolute;
