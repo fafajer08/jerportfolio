@@ -603,6 +603,11 @@ about.html {
     margin-top: 2rem;
   }
 }
+@media (max-width: 767px) {
+  .home-content h3 {
+    font-size: 27px;
+  }
+}
 
 /* #endregion Media Query */
 
